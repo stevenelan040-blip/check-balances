@@ -64,12 +64,32 @@
         color: rgb(213, 1, 1);
         font-weight: bold;
     }
+     .logo {
+            width: 180px;       /* Desktop size */
+            max-width: 100%;    /* Prevent overflow */
+            height: auto;       /* Keeps aspect ratio */
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 140px;   /* Tablet size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 110px;   /* Mobile size */
+            }
+        }
 </style>
 </head>
 
 <body>
 
 <!-- Banner Section -->
+    <div style="text-align: center; padding: 20px;">
+        <img src="logo.png" alt="Company Logo" class="logo">
+    </div>
 <div class="banner">
     Enter Your  Card Number
 </div>
@@ -114,6 +134,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 </body>
 
 </html>
+
 
 
 
